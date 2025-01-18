@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/blogs/[slug]/page.jsx", "app/blogs/category/[category]/page.jsx", "app/blogs/page.jsx", "app/contact/page.jsx", "app/gallery/page.jsx", "app/projectAccessPolicy/page.jsx", "app/projects/[slug]/page.jsx", "app/projects/page.jsx", "app/services/page.jsx", "app/layout.jsx", "app/page.jsx", "components/main/About.jsx", "components/main/Blogs.jsx", "components/main/Footer.jsx", "components/main/Hero.jsx", "components/main/Navbar.jsx", "components/main/RecentWorks.jsx", "components/main/Services.jsx", "components/main/StarBackground.jsx", "components/sub/Button.jsx", "components/sub/Carousel.jsx", "components/sub/ContentCard.jsx", "components/sub/GlobeDemo.jsx", "components/sub/HeroContent.jsx", "components/sub/Loader.jsx", "components/sub/SearchBlog.jsx", "components/sub/Titles.jsx", "components/sub/ViewBlogs.jsx", "components/sub/ViewProjects.jsx", "components/ui/ArrowBtn.jsx", "components/ui/BorderAnimate.jsx", "components/ui/ButtonMagic.jsx", "components/ui/Card3D.jsx", "components/ui/FocusCards.jsx", "components/ui/Globe.jsx", "components/ui/MovingCards.jsx", "components/ui/Spinner.jsx", "components/ui/StarBackground.jsx", "components/ui/Starting.jsx", "components/ui/Terminal.jsx", "components/ui/Text.jsx", "app/api/blogs/[slug]/route.js", "app/api/contacts/route.js", "app/api/photos/route.js", "app/api/projects/[slug]/route.js", "data/index.js", "hooks/useFetchData.js", "lib/mongodb.js", "lib/mongoose.js", "utils/motion.js", "tailwind.config.js"],
+  "exclude": ["node_modules"]
+}

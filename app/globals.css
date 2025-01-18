@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #62acf8; /* لون أساسي - رمادي فاتح */
+  --light-transparent: #3f3351; /* خلفية شفافة - رمادي فاتح */
+  --text-color-primary: #f3f4f6; /* لون النص الأساسي - أبيض فاتح */
+  --text-color-secondary: #d1d5db; /* لون النص الثانوي - رمادي فاتح */
+  --main-back: #030014;
+}
+
+body {
+  font-family: "Parkinsans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-linear {
+    background: linear-gradient(
+      90deg,
+      rgba(156, 178, 255, 1) 0%,
+      rgba(229, 156, 255, 1) 50%,
+      rgba(168, 85, 247, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.Welcome-text {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+.button-primary {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.32) 100%
+    ),
+    rgba(113, 47, 255, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+}
+.button-primary:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.42) 100%
+    ),
+    rgba(113, 47, 255, 0.24);
+  box-shadow: inset 0 0 12px #bf97ff70;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* about section */
+.grid-container {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3a3c75;
+  background: #16162c;
+  border-radius: 12px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grid-headtext {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.grid-subtext {
+  color: #afb0b6;
+  font-weight: normal;
+}
+
+.BorderAnimate::before,
+.BorderAnimate::after {
+  content: "";
+  position: absolute;
+}
+.BorderAnimate::before {
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(
+    #5fbdff 0deg,
+    transparent 60deg,
+    transparent 180deg,
+    #c5fff8 180deg,
+    transparent 240deg
+  );
+  inset: -50%;
+}
+
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--primary-color);
+  }
+}
+
+.creative-dots {
+  padding-left: 0px;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-right: 0px;
+}
+
+.creative-dots .big-dot {
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 80% !important;
+  background-color: #7e37d8 !important;
+  color: #fff;
+}
+
+.creative-dots .semi-big-dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -14px;
+  top: 42px;
+  border-radius: 100%;
+  background-color: #fe80b2 !important;
+  color: #fff;
+}
+
+.creative-dots .medium-dot {
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  left: 18px;
+  top: -5px;
+  background-color: #ffc717 !important;
+  color: #fff;
+}
+
+.creative-dots .semi-medium-dot {
+  position: absolute;
+  border-radius: 100%;
+  width: 13px;
+  height: 13px;
+  left: 20px;
+  top: 38px;
+  background-color: #06b5dd !important;
+  color: #fff;
+}
+
+.creative-dots .semi-small-dot {
+  position: absolute;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  left: 32px;
+  top: 23px;
+  background-color: blue !important;
+  color: #fff;
+}
+
+.creative-dots .small-dot {
+  position: absolute;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  left: 42px;
+  top: 37px;
+  background-color: #0ff !important;
+  color: #fff;
+}
+
+/* تصميم قبل الراديو */
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--primary-color); /* الحدود */
+  border-radius: 50%; /* شكل دائري */
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+}
+
+/* النقطة الداخلية عند الاختيار */
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%; /* دائري */
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+}
+
+/* تصميم قبل checkbox */
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--primary-color); /* الحدود */
+  border-radius: 4px; /* حواف مربعة مستديرة قليلاً */
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+}
+
+/* العلامة الداخلية عند التحديد */
+input[type="checkbox"]:checked::after {
+  content: "✔"; /* علامة التحديد */
+  position: absolute;
+  color: var(--primary-color); /* لون العلامة */
+  font-size: 12px;
+  top: 50%;
+  left: -5px;
+  transform: translate(-50%, -50%); /* توسيط العلامة */
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #d1e5ff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 10px;
+}
+
+.rightimgsec {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  z-index: 2;
+}
+
+.rightimgsec::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 50%;
+  height: 35%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+    260deg,
+    var(--main-site-color) 0%,
+    rgba(115, 67, 210, 0) 100%
+  );
+  filter: blur(130px);
+  z-index: -1;
+}
+
+.rightimgsec img {
+  width: 250px;
+  height: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+  filter: grayscale(0) blur(0);
+  transition: 0.3s ease-in-out;
+}
+
+.rightimgsec img:hover {
+  -webkit-filter: grayscale(100%) blur(3px);
+  filter: grayscale(100%) blur(3px);
+  transition: 0.2s ease-in-out;
+}
+.desc-items h1 {
+  margin-top: 10px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(156, 178, 255, 1) 0%,
+    rgba(229, 156, 255, 1) 50%,
+    rgba(168, 85, 247, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+}
+.desc-items h2,
+.desc-items {
+  color: var(--text-color-secondary);
+}
+.desc-items h1::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  top: 6px;
+  right: 0;
+}
+
+.waving-hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
