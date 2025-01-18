@@ -372,8 +372,8 @@ const BlogPage = () => {
                 {/* Displaying the author's image */}
                 <Image
                   data-aos="fade-right" // Animation on scroll from the right
-                  src={blogData.blog.authorsImg} // Source of the author's image
-                  alt={blogData.blog.authorsName} // Alternative text for the image
+                  src={blogData.blog.authorsImg[0]} // Source of the author's image
+                  alt={blogData.blog.authorsName[0]} // Alternative text for the image
                   width={32} // Specifying width in pixels (corresponds to Tailwind's w-8)
                   height={32} // Specifying height in pixels (corresponds to Tailwind's h-8)
                   className="rounded-full object-cover" // Styling: rounded and properly scaled
@@ -386,7 +386,7 @@ const BlogPage = () => {
                 >
                   {/* Author's name with an underlined effect */}
                   <span className="text-primary-color border-b-2 border-primary-color">
-                    {blogData.blog.authorsName} {/* Dynamic author name */}
+                    {blogData.blog.authorsName[0]} {/* Dynamic author name */}
                   </span>
                 </span>
               </div>
