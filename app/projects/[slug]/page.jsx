@@ -183,25 +183,24 @@ const ProjectPage = () => {
               {/* Displaying the author's image */}
               <Image
                 data-aos="fade-right" // Animation on scroll from the right
-                src='/assets/me'// Source of the author's image
+                src='/assets/me.jpg'// Source of the author's image
                 alt="mazouz" // Alternative text for the image
                 width={32} // Specifying width in pixels (corresponds to Tailwind's w-8)
                 height={32} // Specifying height in pixels (corresponds to Tailwind's h-8)
-                className="rounded-full object-cover" // Styling: rounded and properly scaled
+                className="rounded-full w-12 h-12 object-cover" // Styling: rounded and properly scaled
               />
 
               {/* Displaying the author's name */}
               <span
                 data-aos="fade-left" // Animation on scroll from the left
-                className="text-xl text-tx-primary font-semibold tracking-wide" // Styling for text
+                className="text-xl text-text-color-primary font-semibold tracking-wide" // Styling for text
               >
                 {/* Author's name with an underlined effect */}
-                <span className="text-primary border-b-2 border-primary">
+                <span className="text-primary-color">
                   mazouz{/* Dynamic author name */}
                 </span>
               </span>
             </div>
-
             <div
               data-aos="fade-left"
               className="flex items-center md:gap-3 gap-6"
@@ -214,10 +213,10 @@ const ProjectPage = () => {
                   href={item.link}
                 >
                   <span className="text-xl text-primary-color">
-                    {item.id === 1 && <FaFacebook />}
-                    {item.id === 2 && <FaLinkedinIn />}
+                    {item.id === 2 && <FaFacebook />}
+                    {item.id === 4 && <FaLinkedinIn />}
                     {item.id === 3 && <FaGithub />}
-                    {item.id === 4 && <RiInstagramFill />}
+                    {item.id === 1 && <RiInstagramFill />}
                   </span>
                 </ButtonMagic>
               ))}
@@ -381,7 +380,6 @@ const ProjectPage = () => {
                 View Project
               </Link>
               <Link
-                target="_blanck"
                 href={projectData.openSource}
                 className="px-4 py-2 bg-primary-color rounded"
               >

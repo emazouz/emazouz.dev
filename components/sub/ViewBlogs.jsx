@@ -45,8 +45,8 @@ const ViewBlogs = ({ item, idx }) => {
           {/* Displaying the author's image */}
           <Image
             data-aos="fade-right" // Animation on scroll from the right
-            src={item.authorsImg} // Source of the author's image
-            alt={item.authorsName} // Alternative text for the image
+            src={item.authorsImg[0]} // Source of the author's image
+            alt={item.authorsName[0]} // Alternative text for the image
             width={32} // Specifying width in pixels (corresponds to Tailwind's w-8)
             height={32} // Specifying height in pixels (corresponds to Tailwind's h-8)
             className="rounded-full object-cover" // Styling: rounded and properly scaled
@@ -55,11 +55,11 @@ const ViewBlogs = ({ item, idx }) => {
           {/* Displaying the author's name */}
           <span
             data-aos="fade-left" // Animation on scroll from the left
-            className="text-xl text-tx-primary font-semibold tracking-wide" // Styling for text
+            className="text-xl text-text-color-primary font-semibold tracking-wide" // Styling for text
           >
             {/* Author's name with an underlined effect */}
-            <span className="text-primary border-b-2 border-primary">
-              {item.authorsName} {/* Dynamic author name */}
+            <span className="text-primary-color border-b-2 border-primary-color">
+              {item.authorsName[0]} {/* Dynamic author name */}
             </span>
           </span>
         </div>

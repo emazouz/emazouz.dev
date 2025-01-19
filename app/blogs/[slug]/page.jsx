@@ -415,10 +415,10 @@ const BlogPage = () => {
                   href={item.link}
                 >
                   <span className="text-xl">
-                    {item.id === 1 && <FaFacebook />}
-                    {item.id === 2 && <FaLinkedinIn />}
+                    {item.id === 2 && <FaFacebook />}
+                    {item.id === 4 && <FaLinkedinIn />}
                     {item.id === 3 && <FaGithub />}
-                    {item.id === 4 && <RiInstagramFill />}
+                    {item.id === 1 && <RiInstagramFill />}
                   </span>
                 </ButtonMagic>
               ))}

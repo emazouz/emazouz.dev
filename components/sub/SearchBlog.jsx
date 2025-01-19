@@ -36,7 +36,6 @@ const SearchBlog = () => {
 
   return (
     <div
-      data-aos="fade-right"
       className="w-full flex flex-col gap-y-4 items-center p-4"
     >
       {/* البحث */}
@@ -55,7 +54,7 @@ const SearchBlog = () => {
 
       {/* عرض النتائج */}
       {!loading && (
-        <div data-aos="fade-up" className="w-full px-5 mt-2">
+        <div className="w-full px-5 mt-2">
           {filteredBlogs.length === 0 ? (
             <span className="text-gray-500 px-4">
               No blogs match your search.

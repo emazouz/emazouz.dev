@@ -4,27 +4,12 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Loader from "@/components/sub/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
-export default function RootLayout({
-  children,
-}) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
+export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({
       disable: false, // تعطيل AOS بناءً على الشرط
@@ -50,15 +35,9 @@ export default function RootLayout({
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
         <StarsCanvas />
-        {/* {isLoading ? (
-          <Loader />
-        ) : (
-          <> */}
         <Navbar />
         {children}
         <Footer />
-        {/* </>
-        )} */}
       </body>
     </html>
   );

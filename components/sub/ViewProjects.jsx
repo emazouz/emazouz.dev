@@ -150,7 +150,6 @@ const ViewProjects = ({ id }) => {
                   </Link>
 
                   <Link
-                    target="_blank"
                     href={item.openSource || "/projectAccessPolicy"}
                   >
                     <ArrowBtn title={"GitHub"} icon={<FaGithub />} />

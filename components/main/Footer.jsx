@@ -47,10 +47,10 @@ const Footer = () => {
                 href={item.link}
               >
                 <span className="text-xl">
-                  {item.id === 1 && <FaFacebook />}
-                  {item.id === 2 && <FaLinkedinIn />}
+                  {item.id === 1 && <RiInstagramFill />}
+                  {item.id === 2 && <FaFacebook />}
                   {item.id === 3 && <FaGithub />}
-                  {item.id === 4 && <RiInstagramFill />}
+                  {item.id === 4 && <FaLinkedinIn />}
                 </span>
               </ButtonMagic>
             ))}
